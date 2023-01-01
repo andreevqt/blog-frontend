@@ -50,6 +50,7 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     "react/function-component-definition": ["error", {"namedComponents": "arrow-function"}],
+    "import/prefer-default-export": "off",
     "no-console": ["warn", { "allow": ["warn", "error"] }],
     "no-restricted-imports": ["warn", "styled-components"],
     "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}]
