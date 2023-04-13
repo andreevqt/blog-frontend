@@ -1,11 +1,16 @@
 import React from 'react';
 
 import { Container } from '../container';
+import { Logo } from '../../icons';
 
-import { BaseHeader } from './header.styles';
+import { BaseHeader, LogoContainer } from './header.styles';
 
 export const Header: React.FC = () => (
   <BaseHeader>
-    <Container>Hello</Container>
+    <Container>
+      <LogoContainer to="/">
+        <Logo />
+      </LogoContainer>
+    </Container>
   </BaseHeader>
 );

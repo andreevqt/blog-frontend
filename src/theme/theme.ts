@@ -23,4 +23,5 @@ export enum ContainerWidth {
 
 export enum Font {
   Regular = 'Gilroy, sans-serif',
+  Heading = 'Gilroy, sans-serif',
 }
