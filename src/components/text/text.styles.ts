@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { TStyledWithTheme, TTheme, fonts } from '../../theme';
+import { TStyledWithTheme, TTheme } from '../../theme';
 import { Font } from '../../theme/theme';
 
 import { TTextProps } from './types';

@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export type TTextVariant = 'primary' | 'default' | 'success' | 'warning' | 'danger';
 
 export type TTextType = 'heading' | 'regular';
@@ -8,4 +10,5 @@ export type TTextProps = {
   variant?: TTextVariant;
   type?: TTextType;
   size?: TTextSize;
+  children?: ReactNode;
 };
