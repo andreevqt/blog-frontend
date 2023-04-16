@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 
-import { TStyledWithTheme, TTheme } from '../../theme';
 import { Font } from '../../theme/theme';
 
 import { TTextProps } from './types';
@@ -18,27 +17,25 @@ const regularMap = {
 const getDefaultAttrs = ({ type = 'regular', size = 'M' }: TGetDefaultAttrsParams) => {
   switch (type) {
     case 'regular':
-      return css<TTheme>`
+      return css`
         font-size: ${regularMap[size]};
         font-family: ${Font.Regular};
         font-weight: 400;
       `;
     default:
-      return css<TTheme>`
+      return css`
         font-size: 14px;
       `;
   }
 };
 
-export const StyledText = styled.div<TStyledWithTheme<TStyledTextProps>>`
-  ${(props) => `
+export const StyledText = styled.div<TStyledTextProps>`
+  ${(props) => css`
+    color: ${props.variant === 'default'
+      ? props.theme.body.base
+      : props.variant === 'primary'
+      ? props.theme.primary.base
+      : props.theme.body.base};
     ${getDefaultAttrs({ type: props.type, size: props.size })}
-    color: ${
-      props.variant === 'default'
-        ? props.theme.body.base
-        : props.variant === 'primary'
-        ? props.theme.primary.base
-        : props.theme.body.base
-    };
   `}
 `;

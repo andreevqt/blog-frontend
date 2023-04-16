@@ -11,8 +11,9 @@ export const Button: React.FC<TButtonProps> = ({
   loading = false,
   variant = 'primary',
   children,
+  className,
 }) => (
-  <StyledButton size={size} fullWidth={fullWidth} loading={loading} variant={variant}>
+  <StyledButton size={size} fullWidth={fullWidth} loading={loading} variant={variant} className={className}>
     <Text size={size}>{children}</Text>
   </StyledButton>
 );

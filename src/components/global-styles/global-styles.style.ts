@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { fonts, TTheme } from '../../theme';
+import { fonts, Spacing, TTheme } from '../../theme';
 
 export const Global = createGlobalStyle<{ theme: TTheme }>`
   ${fonts}
@@ -16,5 +16,9 @@ export const Global = createGlobalStyle<{ theme: TTheme }>`
     text-decoration: none;
     color: inherit;
   }
+
+  .mr-xs {
+    margin-right: ${Spacing.XS};
+  };
 
 `;
