@@ -91,5 +91,9 @@ export const StyledButton = styled(BaseButton)<TStyledButtonProps>`
     cursor: ${props.loading ? 'none' : 'pointer'};
     ${getButtonSize(props.size)};
     ${getButtonVariant(props.variant)};
+
+    ${Text} {
+      font-weight: 500;
+    }
   `}
 `;

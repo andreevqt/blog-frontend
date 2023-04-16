@@ -20,7 +20,6 @@ const getDefaultAttrs = ({ type = 'regular', size = 'M' }: TGetDefaultAttrsParam
       return css`
         font-size: ${regularMap[size]};
         font-family: ${Font.Regular};
-        font-weight: 400;
       `;
     default:
       return css`
@@ -31,6 +30,7 @@ const getDefaultAttrs = ({ type = 'regular', size = 'M' }: TGetDefaultAttrsParam
 
 export const StyledText = styled.div<TStyledTextProps>`
   ${(props) => css`
+    font-weight: 400;
     color: ${props.variant === 'default'
       ? props.theme.body.base
       : props.variant === 'primary'
